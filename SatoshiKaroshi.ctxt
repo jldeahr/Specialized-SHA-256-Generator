@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=
+comment1.target=void\ one()
+comment2.params=
+comment2.target=java.lang.String\ getDay()
+comment3.params=
+comment3.target=java.lang.String\ getMonth()
+comment4.params=
+comment4.target=java.lang.String\ getYear()
+comment5.params=
+comment5.target=void\ min()
+comment6.params=
+comment6.target=void\ hour()
+comment7.params=
+comment7.target=void\ sec()
+comment8.params=
+comment8.target=void\ random6Char()
+comment9.params=
+comment9.target=void\ build()
+numComments=10
