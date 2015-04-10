@@ -31,17 +31,24 @@ public class SatoshiKaroshi
     static ArrayList<String> min = new ArrayList<String>();
     static ArrayList<String> hour = new ArrayList<String>();
     public static void main(String[] args)
+    throws FileNotFoundException
     {
         one();
+        System.out.println("Coordinates list finished.");
         min();
+        System.out.println("Minutes list finished.");
         hour();
+        System.out.println("Hours list finished.");
         sec();
+        System.out.println("Seconds list finished.");
         random6Char();
+        System.out.println("6Char finished.");
         //System.out.println((String)c.get(0) + (String)getYear() + "-" + (String)getMonth() + "-" + (String)getDay() + " " + (String)hour.get(0) + ":" + (String)min.get(0) + ":" + (String)sec.get(0) + ")");
         build();
+        System.out.println("Wordlist and hashlist finished.");
     }
 
-    public static void one()
+    private static void one()
     {
         for (int i = 0; i < a.length; i++)
         {
@@ -50,7 +57,7 @@ public class SatoshiKaroshi
         }
     }
 
-    public static String getDay()
+    private static String getDay()
     {
         GregorianCalendar cal = new GregorianCalendar();
         int day = cal.get(cal.DAY_OF_MONTH) + 1;
@@ -66,7 +73,7 @@ public class SatoshiKaroshi
         return sDay;
     }
 
-    public static String getMonth()
+    private static String getMonth()
     {
         GregorianCalendar cal = new GregorianCalendar();
         int month = cal.get(cal.MONTH) + 1;
@@ -74,7 +81,7 @@ public class SatoshiKaroshi
         return sMonth;
     }
 
-    public static String getYear()
+    private static String getYear()
     {
         GregorianCalendar cal = new GregorianCalendar();
         int year = cal.get(cal.YEAR);
@@ -82,7 +89,7 @@ public class SatoshiKaroshi
         return sYear;
     }
 
-    public static void min()
+    private static void min()
     {
         for (int i = 0; i < 60; i++)
         {
@@ -95,7 +102,7 @@ public class SatoshiKaroshi
         }
     }
 
-    public static void hour()
+    private static void hour()
     {
         for (int i = 0; i < 24; i++)
         {
@@ -108,7 +115,7 @@ public class SatoshiKaroshi
         }
     }
 
-    public static void sec()
+    private static void sec()
     {
         for (int i = 0; i < 60; i++)
         {
@@ -122,12 +129,14 @@ public class SatoshiKaroshi
     }
 
     @SuppressWarnings("unchecked")
-    public static void random6Char()
+    private static void random6Char()
     throws FileNotFoundException
     {
         PrintWriter out = new PrintWriter("6char.txt");
-        int h = 0;
-        while (h < 2176782337L)
+        long h = 0;
+        //while (h < 2176782337L)
+        //{
+        for (long g = 0; g < 2176782337L; g++)
         {
             for (int i = 0; i < b.length; i++)
             {
@@ -142,10 +151,8 @@ public class SatoshiKaroshi
                                 for (int n = 0; n < b.length; n++)
                                 {
                                     out.println(b[i] + b[j] + b[k] + b[l] + b[m] + b[n]);
-                                    //System.out.println(a[i] + a[j] + a[k] + a[l] + a[m] + a[n] + a[o] + a[p] + a[q] + a[r] + a[s] + a[t] + a[u] + a[v] + a[w] + a[x]);
-                                    //System.out.println(f.get(f.size()-1));
-                                    h++;
-                                    System.out.println(h);
+                                    //h++;
+                                    //System.out.println(h);
                                 }
                             }
                         }
@@ -153,10 +160,11 @@ public class SatoshiKaroshi
                 }
             }
         }
+        //}
     }
 
     @SuppressWarnings("unchecked")
-    public static void build()
+    private static void build()
     throws FileNotFoundException
     {
         PrintWriter out = new PrintWriter("SatoshiKaroshiWords.txt");
@@ -166,7 +174,7 @@ public class SatoshiKaroshi
 
         String str;
         String hash;
-        while (in.hasNextLine())
+        for (long h = 0; h <2176782337L; h++)
         {
             for (int i = 0; i < c.size()-1; i++)
             {
@@ -179,6 +187,7 @@ public class SatoshiKaroshi
                             str = (String)c.get(i) + (String)getYear() + "-" + (String)getMonth() + "-" + (String)getDay() + " " + (String)hour.get(j) + ":" + (String)min.get(k) + ":" + (String)sec.get(l) + ")" + in.nextLine();
                             hash = encryptPassword(str);
                             out.println(str);
+                            out2.println(hash);
                         }
                     }
                 }
